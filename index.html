@@ -1,0 +1,42 @@
+<html>
+<head> 
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head> 
+<body>
+  <div class="container">
+    <h1 class="text-center">Pixel Editor</h1>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div id="grid-location"></div>
+
+        <button id="button" class="btn btn-primary" onclick="generateGrid()">Generate Grid</button>
+        <button id="reset" class="btn btn-warning" onclick="reset()">Reset</button>
+      </div> 
+
+      <div class="col-sm-6">
+        <div class="toolbar">
+          <div id="pencil-tool" onclick="selectPencilTool()">P</div>
+          <div id="eraser-tool" onclick="selectEraserTool()">E</div>
+        </div> 
+
+        <div class="colors">
+          <div id="black-color"  onclick="selectBlackColor()" ></div>          
+          <div id="blue-color"   onclick="selectBlueColor()"></div>
+          <div id="red-color"    onclick="selectRedColor()"></div>
+          <div id="yellow-color" onclick="selectYellowColor()"></div>
+          <div id="white-color"  onclick="selectWhiteColor()"></div>
+        </div> 
+      </div>
+
+      <div class="col-sm-2">
+        <div id="selected-color">Color: Black</div>
+        <div id="selected-tool">Tool: Pencil</div>
+      </div> 
+    </div> <!-- ./row -->
+  </div> <!-- /.container -->
+</body> 
+</html>
