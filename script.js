@@ -1,24 +1,36 @@
 var tools = ["pencil", "eraser"];
-var selected_tool = "pencil";
-
-var selected_color = "black";
 var colors = ["black", "red", "blue", "yellow", "white"];
+var selected_tool = "pencil"
+var selected_color = "black";
+
 var gridSize;
+var cellSize;
 
 function generateGrid(){
   const grid = document.getElementById('grid-location');
+  
+  size = prompt("Specify Grid Size, example: 20 for 20x20\n\nMaximum Value is 40",20);
 
-  var size = prompt("Specify Grid Size, example: 20 for 20x20",20)
   gridSize = size * size;
   console.log(gridSize);
   console.log("size " + size);
+
+  // Smaller the grid size, bigger the cells. Larger the grid size, smaller the cells
+  cellSize = 50-size
+  if (cellSize <= 20){
+    cellSize = 15
+  }
+  
+  console.log(cellSize)
   for (var i = 0; i < gridSize; i++){
     let row = document.createElement('div');
     if (i % size == 0){
       row.style.display = "float"
-    }else{
+    }else{    
       row.style.display = "inline-block";
       row.classList.add('cell');
+      row.style.width = cellSize
+      row.style.height = cellSize  
       row.style.backgroundColor = "#F8F8F8";
       row.addEventListener('mousedown', (e) => changeCellColor(e));
       row.addEventListener('mousedown', (e) => eraseCellColor(e));      
@@ -27,7 +39,7 @@ function generateGrid(){
     document.body.appendChild(grid);
     grid.classList.add('container');
     grid.classList.add('text-center');
-    removeGenerateDivButton();    
+    removeGenerateDivButton();  
   }
 }
 
