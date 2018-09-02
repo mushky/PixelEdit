@@ -77,3 +77,12 @@
 	float:left;
 }
 
+#purple-color {
+	border-style: solid;
+	border-color: black;
+	background-color: purple;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+

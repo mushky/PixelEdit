@@ -1,5 +1,5 @@
 var tools = ["pencil", "eraser"];
-var colors = ["black", "red", "blue", "yellow", "white"];
+var colors = ["black", "red", "blue", "yellow", "white", "purple"];
 var selected_tool = "pencil"
 var selected_color = "black";
 
@@ -126,6 +126,15 @@ function selectYellowColor(){
 function selectWhiteColor(){
   var whiteColor = document.getElementById('white-color');
   whiteColor.addEventListener('mousedown', (e) => selected_color = "#F8F8F8");
+  console.log(selected_color);
+  var message = document.getElementById('selected-color');
+  message.innerHTML = "Color: " + selected_color;
+}
+
+
+function selectPurpleColor(){
+  var whiteColor = document.getElementById('purple-color');
+  whiteColor.addEventListener('mousedown', (e) => selected_color = "purple");
   console.log(selected_color);
   var message = document.getElementById('selected-color');
   message.innerHTML = "Color: " + selected_color;
