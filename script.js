@@ -44,7 +44,7 @@ function generateGrid(){
 }
 
 function cellNearMe(){
-  
+  // Finds Cells next to selected cell
 }
 
 function removeGenerateDivButton(){
