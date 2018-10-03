@@ -51,7 +51,7 @@ function getOrderedRectangleCoordinates(x0, y0, x1, y1) {
     x1 : Math.max(x0, x1),
     y1 : Math.max(y0, y1)
   };
-},
+}
 
 function getRectanglePixels(x0, y0, x1, y1) {
   var rectangle = getOrderedRectangleCoordinates(x0, y0, x1, y1);
@@ -63,7 +63,7 @@ function getRectanglePixels(x0, y0, x1, y1) {
     }
   }
   return pixels;
-},
+}
 // Rectangle End
 
 function cellNearMe(){
